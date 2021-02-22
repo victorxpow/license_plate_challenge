@@ -19,6 +19,18 @@ class LicensePlatesController < ApplicationController
     render :new
   end
 
+  def edit
+    @license_plate = LicensePlate.find(params[:id])
+  end
+  
+  def update
+    @license_plate = LicensePlate.find(params[:id])
+    return redirect_to @license_plate,
+    notice: 'Placa editada com sucesso' if @license_plate.update(license_plate_params)
+
+    render :new
+  end
+
   private
 
   def license_plate_params
