@@ -4,9 +4,7 @@
     %small Todas as Placas cadastradas
 .my-3.p-3.bg-body.rounded.shadow-sm
   .pull-right
-    %a.btn.btn-default-btn-xs.btn-success
-      %i.glyphicon.glyphicon-plus
-      Novo Registro
+    = link_to 'Novo Registro', new_license_plate_path, class: 'btn btn-success'
   %table.table.table-bordered.table-condensed.table-hover
     %thead
       %tr

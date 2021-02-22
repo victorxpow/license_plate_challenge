@@ -11,6 +11,7 @@ feature 'User view lincese plates' do
     expect(page).to have_content(other_license_plate.id)
     expect(page).to have_content(other_license_plate.owner)
     expect(page).to have_content(license_plate.owner)
+    expect(page).to_not have_content('2010')
   end
 
   scenario 'see more details successfully' do

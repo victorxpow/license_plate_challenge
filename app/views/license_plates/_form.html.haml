@@ -1,0 +1,5 @@
+= simple_form_for @license_plate do |f|
+  = f.input :owner, label: 'Nome do Proprietário'
+  = f.input :model, label: 'Modelo'
+  = f.input :year, label: 'Ano'
+  = f.button :submit, 'Salvar', class: 'btn btn-primary'
