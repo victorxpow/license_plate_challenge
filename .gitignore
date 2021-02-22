@@ -34,3 +34,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Igore docker files to heroku
+docker-compose.yml
+Dockerfile
