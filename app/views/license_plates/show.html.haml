@@ -19,5 +19,5 @@
       %td= @license_plate.year
       %td
         %a= link_to 'Editar', edit_license_plate_path(@license_plate)
-        -# = link_to '', license_plate_path(license_plate), method: :delete
+        %a= link_to 'Remover', license_plate_path(@license_plate), method: :delete
         -#   data: { confirm: "Tem certeza de que deseja deletar #{license_plate.name}?"}

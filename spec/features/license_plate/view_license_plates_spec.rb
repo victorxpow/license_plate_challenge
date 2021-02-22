@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User view lincese plates' do
+feature 'User view license plates' do
   scenario 'successfully' do
     license_plate = create(:license_plate)
     other_license_plate = create(:license_plate, owner: 'Nicolas', model: 'Tesla', year: '2010')

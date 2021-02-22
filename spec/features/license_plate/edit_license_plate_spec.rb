@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User edit lincese plate' do
+feature 'User edit license plate' do
   scenario 'successfully' do
     license_plate = create(:license_plate)
     other_license_plate = create(:license_plate, owner: 'Nicolas', model: 'Tesla', year: '2010')

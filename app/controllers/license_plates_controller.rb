@@ -28,7 +28,15 @@ class LicensePlatesController < ApplicationController
     return redirect_to @license_plate,
     notice: 'Placa editada com sucesso' if @license_plate.update(license_plate_params)
 
-    render :new
+    render :edit
+  end
+
+  def destroy
+    @license_plate = LicensePlate.find(params[:id])
+    return redirect_to license_plates_path,
+    notice: 'Placa deletada com sucesso' if @license_plate.destroy
+
+    render :show
   end
 
   private

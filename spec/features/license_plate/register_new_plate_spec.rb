@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'register a new plate' do
+feature 'register a new license plate' do
   scenario 'sucessfully' do
 
     visit root_path
