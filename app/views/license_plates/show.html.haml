@@ -1,0 +1,23 @@
+.d-flex.align-items-center.p-3.my-3.text-white.bg-purple.rounded.shadow-sm
+  .lh-2
+    %h2.mb-0.text-white.lh-1 Placa
+    %small Mais detalhes e opções
+.my-3.p-3.bg-body.rounded.shadow-sm
+  .pull-right
+  %table.table.table-bordered.table-condensed.table-hover
+    %thead
+      %tr
+        %td ID
+        %th Proprietário
+        %th Modelo
+        %th Ano
+        %th Ações
+    %tbody#form-list-client-body
+      %td= @license_plate.id
+      %td= @license_plate.owner
+      %td= @license_plate.model
+      %td= @license_plate.year
+      %td
+        -# = link_to '', edit_license_plate_path(license_plate)
+        -# = link_to '', license_plate_path(license_plate), method: :delete
+        -#   data: { confirm: "Tem certeza de que deseja deletar #{license_plate.name}?"}

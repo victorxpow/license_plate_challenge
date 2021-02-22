@@ -12,18 +12,11 @@
       %tr
         %td ID
         %th Proprietário
-        %th Modelo
-        %th Ano
         %th Ações
     %tbody#form-list-client-body
     - @license_plates.each do |license_plate|
       %tr{:id => "license_plate-#{license_plate.id}"}
         %td= license_plate.id
         %td= license_plate.owner
-        %td= license_plate.model
-        %td= license_plate.year
         %td
-          %a a
-          -# = link_to '', edit_license_plate_path(license_plate), class: "ls-ico-pencil"
-          -# = link_to '', license_plate_path(license_plate), method: :delete, class: "ls-ico-remove", |
-          -#   data: { confirm: "Tem certeza de que deseja deletar #{license_plate.name}?"}        |
+          %a= link_to 'Mais detalhes', license_plate_path(license_plate)
